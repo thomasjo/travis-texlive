@@ -18,7 +18,7 @@ TEXMFSYSCONFIG $TARGET_DIR/texmf-config
 TEXMFSYSVAR $TARGET_DIR/texmf-var
 TEXMFVAR $TEXMFSYSVAR
 binary_x86_64-darwin 1
-binary_x86_64-linux 0
+binary_x86_64-linux 1
 collection-basic 1
 collection-binextra 1
 collection-latex 1
