@@ -11,18 +11,17 @@ cat > $PROFILE <<END_CAT
 # texlive.profile generated on $DATE
 selected_scheme scheme-custom
 TEXDIR $TARGET_DIR
-TEXMFCONFIG $TEXMFSYSCONFIG
-TEXMFHOME $TEXMFLOCAL
+TEXMFHOME $TARGET_DIR/texmf
 TEXMFLOCAL $TARGET_DIR/texmf-local
+TEXMFCONFIG $TARGET_DIR/texmf-config
 TEXMFSYSCONFIG $TARGET_DIR/texmf-config
+TEXMFVAR $TARGET_DIR/texmf-var
 TEXMFSYSVAR $TARGET_DIR/texmf-var
-TEXMFVAR $TEXMFSYSVAR
 binary_x86_64-darwin 1
 binary_x86_64-linux 1
 collection-basic 1
 collection-binextra 1
 collection-latex 1
-collection-latexrecommended 0
 option_adjustrepo 1
 option_autobackup 0
 option_desktop_integration 0
