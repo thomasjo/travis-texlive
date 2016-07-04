@@ -2,6 +2,14 @@
 
 set -e
 
+get_platform () {
+  case "$OSTYPE" in
+    darwin*) echo "darwin" ;;
+    linux*)  echo "linux" ;;
+    *)       echo "Unsupported platform" >&2; exit -1 ;;
+  esac
+}
+
 TARGET_DIR=$PWD/texlive
 rm -rf $TARGET_DIR
 
@@ -43,6 +51,10 @@ END_CAT
 
 rm -f installation.profile
 install-tl-*/install-tl -profile $PROFILE
+
+# Install individual packages...
+PATH="$TARGET_DIR/bin/x86_64-$(get_platform):$PATH"
+tlmgr install framed
 
 rm -rf $TARGET_DIR/texmf-dist/doc
 rm -rf $TARGET_DIR/texmf-dist/source
