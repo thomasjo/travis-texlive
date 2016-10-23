@@ -54,7 +54,7 @@ install-tl-*/install-tl -profile $PROFILE
 
 # Install individual packages...
 PATH="$TARGET_DIR/bin/x86_64-$(get_platform):$PATH"
-tlmgr install datatool etoolbox feynmf framed glossaries index metapost mfirstuc nomencl textcase xfor xkeyval
+tlmgr install datatool etoolbox feynmf framed glossaries index metapost mfirstuc nomencl substr supertabular textcase xfor xkeyval
 
 rm -rf $TARGET_DIR/texmf-dist/doc
 rm -rf $TARGET_DIR/texmf-dist/source
